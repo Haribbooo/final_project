@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>메인 페이지입니다.</h1>
+  <h3>페이지가 실행되면 공지창이 뜹니다.</h3>
+  <button type="button" onclick="openPopup()">미니홈페이지</button>
+  <script>
+  let popupbtn = document.querySelector('button');
+  
+  popupbtn.onclick = function() {
+	  let popOption = "width=1400, height=850";
+	  let openUrl = '/user/userpage'
+      window.open(openUrl, '미니홈페이지', popOption);
+    }
+  </script>
+</body>
+</html>
