@@ -29,7 +29,7 @@
 	font-family: 'SBAggroL';
 	font-size: 15px;
 }
-.tag button:hover{
+.tag button:focus{
 	color: black;
 }
 .tag{

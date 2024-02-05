@@ -37,7 +37,7 @@ public class FoodService {
 		  
 		  // 2. 파일 이름은 db에 저장
 		  foodDTO.setFfilename(filename);
-		  foodDTO.setFfilepath("/upload/" + filepath); // 파일 경로 설정함
+		  foodDTO.setFfilepath(filepath + "/" + filename); // 파일 경로 설정함
 		}
 		// dto -> entity로 변환
 		Food food = Food.toSaveEntity(foodDTO);

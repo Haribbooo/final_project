@@ -20,16 +20,23 @@
       				<p class = "tag">건강 관련 식품</p>
             </div>   
           	
-          	<div class="card" th:each="food : ${foodList}">
-          		<img th:src="${food.ffilepath} + '/' + ${food.ffilename}" alt="FoodImage">
-          		<div class="card-content">
-          			<h3 class ="foodh3" th:text="${food.fname}"></h3>
-          			<p class = "foodp" th:text="${food.fcontent}"><br></p>
-          			<p class = "foodprice" th:text="${food.fprice}">원</p>
-          			<p class = foodprice2>
-          				<i class="fa-solid fa-cart-plus" style = "color:green; font-size : 30px; padding-right : 10px;"></i>
-          				<i class="fa-solid fa-link" style = "color:green; font-size : 30px"></i>
-          			</p>
+          	<div class="parent">
+	          	<div class="card" th:each="food : ${foodList}">
+	          		<img th:src="@{/upload/food/} + ${food.ffilename}" alt="FoodImage">
+	          		<div class="card-content">
+	          			<h3 class="foodh3" th:text="${food.fname}"></h3>
+	          			<p class="foodp" th:text="${food.fcontent}"><br></p>
+	          			<div class="foodprice">
+		          			<p data-th-text="${#numbers.formatInteger(food.fprice, 3, 'COMMA') + '원'}"></p>
+		 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		          			<i class="fa-solid fa-cart-plus" style = "color: #5EA601; font-size : 20px; padding-right : 10px;"></i>
+	          				<span th:with="foodLink=${food.flink}">
+		          				<a th:href="@{${foodLink}}" target="_blank">
+		          					<i class="fa-solid fa-link" style = "color: #5EA601; font-size : 20px"></i>
+		          				</a>
+	          				</span>
+	          			</div>
+	          		</div>
           		</div>
           	</div>
             
