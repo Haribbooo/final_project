@@ -21,7 +21,7 @@ public class NewsService {
 
 	public void save(@Valid NewsDTO newsDTO, MultipartFile nimage) throws Exception {	
 		if(!nimage.isEmpty()) {
-			String filepath = "/Users/rim-yeeun/Finalteam1/Code/3work/src/main/resources/static/upload";
+			String filepath = "/Users/rim-yeeun/Finalteam1/Code/3WORK/src/main/resources/static/upload";
 			
 			UUID uuid = UUID.randomUUID();
 			
