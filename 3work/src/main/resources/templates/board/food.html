@@ -21,7 +21,7 @@
             </div>   
           	
           	<div class="card" th:each="food : ${foodList}">
-          		<img th:src="${food.ffilepath}" alt="FoodImage">
+          		<img th:src="${food.ffilepath} + '/' + ${food.ffilename}" alt="FoodImage">
           		<div class="card-content">
           			<h3 class ="foodh3" th:text="${food.fname}"></h3>
           			<p class = "foodp" th:text="${food.fcontent}"><br></p>
