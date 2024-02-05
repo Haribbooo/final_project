@@ -1,4 +1,4 @@
-C드라이브나 원하는 폴더로 이동
+C드라이브나 원하는 폴더로 이동하기
 파일탐색기 주소 창에 cmd 입력
 
 
@@ -15,9 +15,9 @@ C드라이브나 원하는 폴더로 이동
 3. cmd를 그대로 두고 final-project 폴더를 열어서,
    text.txt 를 열고 내용을 아무렇게나 수정한 후에 다시 cmd로 돌아옴
 
-4. git add .tq
+4. git add .
 
-5. git commit -m "코멘트"
+5. git commit -m "코멘트"11
    ex) git commit -m "test: update txt"
 
 6. git push origin 브런치명
